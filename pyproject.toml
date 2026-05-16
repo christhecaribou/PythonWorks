@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=82.0.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "PythonWorks"
+version = "0.1.0"
+description = "A silly little repository for playing with Pythons"
+readme = "README.md"
+requires-python = ">=3.14.5"
+dependencies = [
+    "requests", # Example dependency
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+    "pytest-cov",
+]
+
+[project.scripts]
+python-works = "PythonWorks.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]  # Explicitly tells setuptools to look in 'src'
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"] # Ensures 'src' is in the path when running tests
