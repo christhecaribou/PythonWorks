@@ -7,8 +7,9 @@ From the package source directory:
 python -m venv .venv
 source .venv/bin/activate
 
+pip install virtualenv
 pip install setuptools
 pip install --editable .
 
-python -c "import PythonWorks"
+python-works
 ```
